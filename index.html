@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gathrika Skin Clinic · Dr. Kiranmayee · Hyderabad</title>
+<meta name="description" content="Laser, peels, hair fall &amp; wart care in Hyderabad. Dr. Kiranmayee at Gathrika Skin Clinic — 4.9★ from 230 patients. Book a consult.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231C2429'/%3E%3Cpath d='M8 16h16' stroke='%232AA7A1' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400;1,8..60,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --mist:#EEF2F4; --slate:#1C2429; --cyan:#2AA7A1; --lilac:#C9B8D4;
+  --white:#FFFFFF; --line:rgba(28,36,41,.1); --mute:#5A666E;
+  --card:#FFFFFF; --radius:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:'Sora',system-ui,sans-serif;
+  background:var(--mist); color:var(--slate);
+  line-height:1.6; font-weight:400;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1140px,100% - 48px);margin-inline:auto}
+.serif{font-family:'Source Serif 4',Georgia,serif}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--cyan);font-weight:600;
+}
+.laser-dot{width:6px;height:6px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 3px rgba(42,167,161,.2)}
+
+/* Sticky-ish booking bar (desktop) */
+.bookbar{
+  position:sticky;top:0;z-index:45;
+  background:var(--slate);color:#fff;
+  border-bottom:1px solid rgba(42,167,161,.25);
+}
+.bookbar-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  height:52px;gap:16px;font-size:13px;
+}
+.bookbar-left{display:flex;align-items:center;gap:18px;opacity:.9}
+.bookbar-left strong{font-weight:600;color:#fff}
+.bookbar-cta{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:8px 16px;border-radius:8px;
+  background:var(--cyan);color:#fff;font-weight:600;font-size:12.5px;
+  transition:filter .2s;
+}
+.bookbar-cta:hover{filter:brightness(1.08)}
+.bookbar-phone{color:rgba(255,255,255,.7);font-size:12.5px}
+.bookbar-phone:hover{color:#fff}
+
+/* NAV */
+.nav{
+  background:var(--slate);
+  border-bottom:1px solid rgba(255,255,255,.06);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;color:#fff}
+.brand-mark{
+  width:32px;height:32px;border-radius:8px;
+  background:linear-gradient(135deg,var(--cyan),#1a8a85);
+  display:grid;place-items:center;
+}
+.brand-mark span{width:14px;height:2px;background:#fff;border-radius:2px;display:block;box-shadow:0 -4px 0 #fff,0 4px 0 #fff}
+.brand strong{font-size:15px;font-weight:600;letter-spacing:-.01em}
+.brand em{display:block;font-style:normal;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.45);font-weight:400;margin-top:2px}
+.nav-links{display:flex;gap:26px;font-size:13px;color:rgba(255,255,255,.55)}
+.nav-links a:hover{color:#fff}
+.nav-wa{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:10px 18px;border-radius:8px;
+  border:1px solid rgba(255,255,255,.18);color:#fff;font-size:13px;font-weight:500;
+  transition:border-color .2s,background .2s;
+}
+.nav-wa:hover{border-color:var(--cyan);background:rgba(42,167,161,.12)}
+
+/* FULL-BLEED dark hero */
+.hero{
+  background:var(--slate);color:#fff;
+  position:relative;overflow:hidden;
+  padding:72px 0 88px;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 60% 50% at 85% 20%, rgba(42,167,161,.18), transparent 60%),
+    radial-gradient(ellipse 40% 40% at 10% 80%, rgba(201,184,212,.05), transparent 55%);
+  pointer-events:none;
+}
+.hero-grid{
+  position:relative;z-index:1;
+  display:grid;grid-template-columns:1.15fr .85fr;
+  gap:48px;align-items:center;
+}
+.hero h1{
+  font-size:clamp(36px,5.2vw,58px);
+  font-weight:600;letter-spacing:-.035em;line-height:1.08;
+  margin:16px 0 20px;max-width:14ch;
+}
+.hero h1 .accent{
+  font-family:'Source Serif 4',Georgia,serif;
+  font-style:italic;font-weight:400;color:var(--cyan);
+}
+.hero-lede{font-size:16px;color:rgba(255,255,255,.62);max-width:42ch;font-weight:300;line-height:1.65}
+.hero-stats{
+  display:flex;flex-wrap:wrap;gap:24px;margin:28px 0 32px;
+  padding-top:24px;border-top:1px solid rgba(255,255,255,.1);
+}
+.stat strong{display:block;font-size:22px;font-weight:600;letter-spacing:-.02em}
+.stat span{font-size:12px;color:rgba(255,255,255,.45);letter-spacing:.04em}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:14px 22px;border-radius:8px;font-size:14px;font-weight:600;
+  border:1px solid transparent;transition:all .2s;
+}
+.btn-cyan{background:var(--cyan);color:#fff}
+.btn-cyan:hover{filter:brightness(1.08)}
+.btn-outline{border-color:rgba(255,255,255,.22);color:#fff;background:transparent}
+.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.06)}
+.btn-dark{background:var(--slate);color:#fff}
+.btn-dark:hover{background:#0f1518}
+.btn-ghost-dark{border:1px solid var(--line);background:var(--white);color:var(--slate)}
+.btn-ghost-dark:hover{border-color:var(--slate)}
+
+.hero-card{
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:16px;overflow:hidden;
+  backdrop-filter:blur(8px);
+}
+.hero-card img{width:100%;aspect-ratio:16/11;object-fit:cover;opacity:.9}
+.hero-card-body{padding:20px 22px 24px}
+.hero-card-body p{
+  font-family:'Source Serif 4',Georgia,serif;
+  font-size:18px;font-style:italic;line-height:1.35;
+  color:rgba(255,255,255,.9);
+}
+.hero-card-body span{display:block;margin-top:10px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--cyan)}
+
+/* RESULTS strip */
+.results{
+  background:var(--white);
+  border-bottom:1px solid var(--line);
+  padding:0;
+}
+.results-track{
+  display:grid;grid-template-columns:repeat(4,1fr);
+}
+.result-item{
+  padding:36px 28px;border-right:1px solid var(--line);
+  transition:background .2s;
+}
+.result-item:last-child{border-right:0}
+.result-item:hover{background:color-mix(in srgb,var(--cyan) 4%,#fff)}
+.result-item .tag{
+  font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--cyan);font-weight:600;margin-bottom:12px;
+}
+.result-item h3{font-size:18px;font-weight:600;letter-spacing:-.02em;margin-bottom:8px}
+.result-item p{font-size:13.5px;color:var(--mute);font-weight:300;line-height:1.55}
+
+/* PROCESS numbered */
+.section{padding:88px 0}
+.section-head{margin-bottom:44px}
+.section-head h2{
+  font-size:clamp(28px,3.6vw,40px);font-weight:600;
+  letter-spacing:-.03em;margin:12px 0 10px;
+}
+.section-head p{color:var(--mute);font-size:15.5px;max-width:48ch;font-weight:300}
+.process{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:16px;
+}
+.step{
+  background:var(--white);border:1px solid var(--line);
+  border-radius:var(--radius);padding:28px 22px 30px;
+  position:relative;overflow:hidden;
+}
+.step::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:3px;
+  background:var(--cyan);opacity:.0;transition:opacity .25s;
+}
+.step:hover::before{opacity:1}
+.step-num{
+  font-family:'Source Serif 4',Georgia,serif;
+  font-size:42px;font-weight:500;color:var(--cyan);
+  line-height:1;margin-bottom:16px;letter-spacing:-.03em;
+  opacity:.85;
+}
+.step h3{font-size:16px;font-weight:600;margin-bottom:8px;letter-spacing:-.01em}
+.step p{font-size:13.5px;color:var(--mute);font-weight:300}
+
+/* Services grid */
+.services{
+  display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center;
+}
+.svc-visual{
+  border-radius:16px;overflow:hidden;aspect-ratio:5/4;
+  background:var(--slate);position:relative;
+}
+.svc-visual img{width:100%;height:100%;object-fit:cover;opacity:.88}
+.svc-visual::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(28,36,41,.15),rgba(42,167,161,.2));
+}
+.svc-list{display:grid;gap:14px}
+.svc-row{
+  display:grid;grid-template-columns:auto 1fr;gap:16px;
+  padding:18px 20px;background:var(--white);
+  border:1px solid var(--line);border-radius:12px;
+  transition:border-color .2s;
+}
+.svc-row:hover{border-color:var(--cyan)}
+.svc-ico{
+  width:40px;height:40px;border-radius:10px;
+  background:color-mix(in srgb,var(--cyan) 12%,#fff);
+  display:grid;place-items:center;color:var(--cyan);font-weight:700;font-size:13px;
+}
+.svc-row h3{font-size:15px;font-weight:600;margin-bottom:4px}
+.svc-row p{font-size:13px;color:var(--mute);font-weight:300}
+
+/* Pull quotes */
+.reviews-band{
+  background:var(--slate);color:#fff;
+  padding:80px 0;position:relative;overflow:hidden;
+}
+.reviews-band::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(ellipse 50% 60% at 0% 50%, rgba(201,184,212,.05), transparent 50%);
+  pointer-events:none;
+}
+.pulls{display:grid;grid-template-columns:1fr 1fr;gap:28px;position:relative;z-index:1}
+.pull{
+  padding:36px 32px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:16px;
+  background:rgba(255,255,255,.03);
+}
+.pull blockquote{
+  font-family:'Source Serif 4',Georgia,serif;
+  font-size:clamp(22px,2.4vw,28px);
+  font-style:italic;font-weight:400;line-height:1.35;
+  letter-spacing:-.01em;
+}
+.pull figcaption{
+  margin-top:20px;font-size:12px;letter-spacing:.08em;
+  text-transform:uppercase;color:rgba(255,255,255,.4);
+}
+.pull .stars{color:var(--cyan);letter-spacing:2px;margin-bottom:14px;font-size:13px}
+
+/* Doctor */
+.doctor{
+  display:grid;grid-template-columns:1fr 1.2fr;gap:48px;align-items:center;
+}
+.doc-photo{
+  border-radius:16px;overflow:hidden;aspect-ratio:1;
+  background:linear-gradient(160deg,#d8e4e6,var(--mist));
+}
+.doc-photo img{width:100%;height:100%;object-fit:cover}
+.doc-copy h2{font-size:clamp(28px,3.4vw,38px);font-weight:600;letter-spacing:-.03em;margin:12px 0 14px}
+.doc-copy p{color:var(--mute);font-size:15px;font-weight:300;margin-bottom:12px;max-width:48ch}
+.doc-meta{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0}
+.chip{
+  padding:8px 14px;border-radius:999px;font-size:12px;font-weight:500;
+  background:color-mix(in srgb,var(--cyan) 10%,#fff);
+  color:var(--slate);border:1px solid color-mix(in srgb,var(--cyan) 25%,transparent);
+}
+
+/* Contact */
+.contact-grid{
+  display:grid;grid-template-columns:1.2fr .8fr;gap:24px;
+}
+.contact-main{
+  background:var(--white);border:1px solid var(--line);
+  border-radius:16px;padding:36px 32px;
+}
+.contact-main h3{font-size:22px;font-weight:600;margin:10px 0 16px;letter-spacing:-.02em}
+.addr{font-size:15px;color:var(--mute);font-weight:300;line-height:1.6;margin-bottom:20px;max-width:42ch}
+.hours{width:100%;border-collapse:collapse;font-size:14px;margin-bottom:24px}
+.hours td{padding:10px 0;border-bottom:1px solid var(--line)}
+.hours td:last-child{text-align:right;color:var(--mute)}
+.contact-side{
+  background:var(--slate);color:#fff;border-radius:16px;
+  padding:36px 28px;display:flex;flex-direction:column;justify-content:space-between;gap:28px;
+}
+.contact-side h3{font-size:20px;font-weight:600;letter-spacing:-.02em}
+.contact-side p{font-size:14px;color:rgba(255,255,255,.55);font-weight:300;margin-top:10px}
+.contact-side .stack{display:grid;gap:10px;margin-top:20px}
+.map-link{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13.5px;font-weight:500;color:var(--cyan);
+}
+.map-link:hover{text-decoration:underline}
+
+footer{
+  padding:32px 0 110px;border-top:1px solid var(--line);
+  font-size:12.5px;color:var(--mute);
+}
+.foot-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+.demo-note{opacity:.85}
+
+/* FAB — mobile */
+.fab{
+  position:fixed;z-index:50;
+  right:14px;bottom:14px;
+  display:none;gap:8px;
+}
+.fab a{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:12px 16px;border-radius:10px;font-size:13px;font-weight:600;
+  box-shadow:0 8px 24px rgba(0,0,0,.16);
+}
+.fab .wa{background:#25D366;color:#fff}
+.fab .call{background:var(--slate);color:#fff}
+
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s ease}
+.reveal.in{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  .btn,.step::before,.result-item,.svc-row{transition:none}
+}
+
+@media (max-width:960px){
+  .hero-grid{grid-template-columns:1fr;gap:36px}
+  .results-track{grid-template-columns:1fr 1fr}
+  .result-item:nth-child(2){border-right:0}
+  .result-item:nth-child(1),.result-item:nth-child(2){border-bottom:1px solid var(--line)}
+  .process{grid-template-columns:1fr 1fr}
+  .services,.doctor,.contact-grid,.pulls{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .bookbar-left span:not(strong){display:none}
+}
+@media (max-width:600px){
+  .wrap{width:min(1140px,100% - 32px)}
+  .bookbar{display:none}
+  .results-track{grid-template-columns:1fr}
+  .result-item{border-right:0;border-bottom:1px solid var(--line)}
+  .result-item:last-child{border-bottom:0}
+  .process{grid-template-columns:1fr}
+  .hero{padding:48px 0 56px}
+  .hero h1{font-size:34px}
+  .section{padding:64px 0}
+  .pull{padding:26px 22px}
+  .fab{display:flex}
+  footer{padding-bottom:96px}
+}
+@media (max-width:390px){
+  .wrap{width:calc(100% - 28px)}
+  .fab{right:10px;bottom:10px;left:10px;justify-content:stretch}
+  .fab a{flex:1}
+}
+</style>
+</head>
+<body>
+<div class="bookbar" aria-label="Quick booking">
+  <div class="wrap bookbar-inner">
+    <div class="bookbar-left">
+      <strong>Gathrika Skin Clinic</strong>
+      <span>· Hyderabad · 4.9★ · 230 reviews</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:14px">
+      <a class="bookbar-phone" href="tel:+919392631157">+91 93926 31157</a>
+      <a class="bookbar-cta" href="https://wa.me/919392631157" target="_blank" rel="noopener">Book consult</a>
+    </div>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true"><span></span></span>
+      <span>
+        <strong>Gathrika</strong>
+        <em>Skin Clinic</em>
+      </span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#results">Results</a>
+      <a href="#process">Process</a>
+      <a href="#care">Care</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <a class="nav-wa" href="https://wa.me/919392631157" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="reveal">
+        <p class="eyebrow"><span class="laser-dot" aria-hidden="true"></span> Laser · Peel · Hair · Clear skin</p>
+        <h1>Precision derm with a <span class="accent">laser-clear</span> plan.</h1>
+        <p class="hero-lede">Q-Switch pigmentation, chemical peels, hair-fall care and wart clearance — Dr. Kiranmayee at Gathrika Skin Clinic, Hyderabad.</p>
+        <div class="hero-stats">
+          <div class="stat"><strong>4.9★</strong><span>230 Google reviews</span></div>
+          <div class="stat"><strong>Laser</strong><span>Q-Switch pigmentation</span></div>
+          <div class="stat"><strong>Peels</strong><span>Acne &amp; texture change</span></div>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-cyan" href="https://wa.me/919392631157" target="_blank" rel="noopener">Book on WhatsApp</a>
+          <a class="btn btn-outline" href="tel:+919392631157">Call +91 93926 31157</a>
+        </div>
+      </div>
+      <div class="hero-card reveal">
+        <img src="img/gathrika-hero.jpg" alt="Clinical laser and derm setting" width="900" height="620" loading="eager">
+        <div class="hero-card-body">
+          <p>“Q-Switch cleared my pigmentation faster than I expected.”</p>
+          <span>Patient outcome · Laser</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="results" id="results">
+    <div class="wrap">
+      <div class="results-track">
+        <article class="result-item reveal">
+          <p class="tag">01 · Laser</p>
+          <h3>Q-Switch pigmentation</h3>
+          <p>Targeted laser for stubborn spots and uneven tone — patients report clearer, more even skin.</p>
+        </article>
+        <article class="result-item reveal">
+          <p class="tag">02 · Peel</p>
+          <h3>Chemical peel change</h3>
+          <p>Acne and texture protocols that patients describe as a visible before/after shift.</p>
+        </article>
+        <article class="result-item reveal">
+          <p class="tag">03 · Hair</p>
+          <h3>Hair-fall reduction</h3>
+          <p>Structured hair-fall plans with measurable reduction and denser-looking growth.</p>
+        </article>
+        <article class="result-item reveal">
+          <p class="tag">04 · Clear</p>
+          <h3>Warts cleared</h3>
+          <p>Focused wart and lesion clearance — clean results without drama.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap section" id="process">
+    <div class="section-head reveal">
+      <p class="eyebrow">How it works</p>
+      <h2>Consult → Plan → Treat → Maintain</h2>
+      <p>A numbered, no-guesswork path so every visit moves your skin forward.</p>
+    </div>
+    <div class="process">
+      <div class="step reveal">
+        <div class="step-num">01</div>
+        <h3>Consult</h3>
+        <p>Skin history, goals and photos — we listen before we prescribe.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">02</div>
+        <h3>Plan</h3>
+        <p>A clear protocol: laser, peel, hair or lesion care — with timelines.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">03</div>
+        <h3>Treat</h3>
+        <p>Precise sessions. Comfort-first technique. Progress tracked.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">04</div>
+        <h3>Maintain</h3>
+        <p>Home care and follow-ups so results stay stable, not temporary.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap section" id="care" style="padding-top:20px">
+    <div class="services">
+      <div class="svc-visual reveal">
+        <img src="img/gathrika-laser.jpg" alt="Laser and clinical light" width="800" height="640" loading="lazy">
+      </div>
+      <div>
+        <div class="section-head reveal" style="margin-bottom:24px">
+          <p class="eyebrow">Care menu</p>
+          <h2>What we treat</h2>
+          <p>Derm, laser, peels, hair fall and wart clearance under one Hyderabad clinic.</p>
+        </div>
+        <div class="svc-list">
+          <div class="svc-row reveal">
+            <div class="svc-ico">Q</div>
+            <div>
+              <h3>Q-Switch laser</h3>
+              <p>Pigmentation, uneven tone, stubborn spots.</p>
+            </div>
+          </div>
+          <div class="svc-row reveal">
+            <div class="svc-ico">P</div>
+            <div>
+              <h3>Chemical peels</h3>
+              <p>Acne change, texture and glow protocols.</p>
+            </div>
+          </div>
+          <div class="svc-row reveal">
+            <div class="svc-ico">H</div>
+            <div>
+              <h3>Hair-fall care</h3>
+              <p>Assessment-led plans to reduce shedding.</p>
+            </div>
+          </div>
+          <div class="svc-row reveal">
+            <div class="svc-ico">W</div>
+            <div>
+              <h3>Wart clearance</h3>
+              <p>Clean, focused lesion removal.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews-band" id="reviews">
+    <div class="wrap">
+      <div class="section-head reveal" style="margin-bottom:36px">
+        <p class="eyebrow">Outcomes</p>
+        <h2 style="color:#fff">Patients, in their words.</h2>
+      </div>
+      <div class="pulls">
+        <figure class="pull reveal">
+          <div class="stars">★★★★★</div>
+          <blockquote>“Q-Switch laser for pigmentation — the change was clear within a few sessions.”</blockquote>
+          <figcaption>Google review · Laser</figcaption>
+        </figure>
+        <figure class="pull reveal">
+          <div class="stars">★★★★★</div>
+          <blockquote>“Chemical peel changed my acne skin. Hair fall reduced. Warts cleared cleanly.”</blockquote>
+          <figcaption>Google review · Peel · Hair · Clear</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap section" id="doctor">
+    <div class="doctor">
+      <div class="doc-photo reveal">
+        <img src="img/gathrika-skin.jpg" alt="Calm clinical skincare" width="700" height="700" loading="lazy">
+      </div>
+      <div class="doc-copy reveal">
+        <p class="eyebrow">Dermatologist</p>
+        <h2>Dr. Kiranmayee</h2>
+        <p>Leading Gathrika Skin Clinic with a tech-forward but personal approach — laser precision where it helps, gentle peels where skin needs reset, and honest plans for hair fall and warts.</p>
+        <p>Rated 4.9★ across 230 reviews. Follow clinic updates on Instagram @gathrikaskinclinic_5219.</p>
+        <div class="doc-meta">
+          <span class="chip">4.9★ · 230 reviews</span>
+          <span class="chip">Laser + peels</span>
+          <span class="chip">Hyderabad 500098</span>
+        </div>
+        <div class="hero-actions" style="margin-top:8px">
+          <a class="btn btn-dark" href="https://wa.me/919392631157" target="_blank" rel="noopener">Message clinic</a>
+          <a class="btn btn-ghost-dark" href="https://www.instagram.com/gathrikaskinclinic_5219/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap section" id="visit" style="padding-top:20px">
+    <div class="section-head reveal">
+      <p class="eyebrow">Visit</p>
+      <h2>Location &amp; booking</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-main reveal">
+        <p class="eyebrow">Address</p>
+        <h3>Find Gathrika</h3>
+        <p class="addr">17-4, main road, above Union Bank, beside Sampoorna hotel, Hyderabad, Telangana 500098</p>
+        <table class="hours">
+          <tr><td>Clinic hours</td><td>By appointment</td></tr>
+          <tr><td>WhatsApp</td><td>+91 93926 31157</td></tr>
+          <tr><td>Email</td><td>gathrikaskinclinic@gmail.com</td></tr>
+        </table>
+        <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Gathrika+Skin+Clinic+Union+Bank+Sampoorna+hotel+Hyderabad+500098" target="_blank" rel="noopener">Open in Google Maps →</a>
+      </div>
+      <div class="contact-side reveal">
+        <div>
+          <h3>Book your next consult</h3>
+          <p>WhatsApp or call — we’ll confirm a slot that fits your schedule.</p>
+          <div class="stack">
+            <a class="btn btn-cyan" href="https://wa.me/919392631157" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="btn btn-outline" href="tel:+919392631157">Call now</a>
+            <a class="btn btn-outline" href="mailto:gathrikaskinclinic@gmail.com">Email</a>
+          </div>
+        </div>
+        <p style="font-size:12px;color:rgba(255,255,255,.35)">@gathrikaskinclinic_5219</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot-inner">
+    <div>
+      <strong style="color:var(--slate)">Gathrika Skin Clinic</strong>
+      · gathrikaskinclinic@gmail.com · +91 93926 31157
+    </div>
+    <p class="demo-note">Demo for Gathrika Skin Clinic · Built by Zykken (IntentPath)</p>
+  </div>
+</footer>
+
+<div class="fab" aria-label="Quick contact">
+  <a class="wa" href="https://wa.me/919392631157" target="_blank" rel="noopener">WhatsApp</a>
+  <a class="call" href="tel:+919392631157">Call</a>
+</div>
+
+<script>
+(function(){
+  var nodes=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){nodes.forEach(function(n){n.classList.add('in')});return}
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})
+  },{threshold:.12,rootMargin:'0px 0px -36px 0px'});
+  nodes.forEach(function(n){io.observe(n)});
+})();
+</script>
+</body>
+</html>
